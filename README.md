@@ -15,7 +15,7 @@ Appendices
 
 
 ## The team
-acloos & ablevin
+ablevin & acloos
 
 ## Scope
 The scope of the project is limited to the use of the provided iso, which will launch a website on a given IP. There are 14 security breaches to be found, in a CTF format.

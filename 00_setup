@@ -7,14 +7,3 @@ https://www.md5online.org/md5-decrypt.html
 https://md5decrypt.net/en/
 https://www.sqlinjection.net/table-names/
 
-
-
-
-
-create and start python virtual env:
-python3 -m venv .venv
-source .venv/bin/activate
-
-deactivate and remove venv:
-deactivate
-rm -r .venv
