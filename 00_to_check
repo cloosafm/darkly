@@ -1,0 +1,19 @@
+9		cookie							OK		md5 on cookie value
+2		home : search image				OK		SQL inj. to get DB - read db and apply md5 on Member_images.list_images "comment"
+1		home : login					OK		SQL inj. to get DB - read db and apply md5 on Member_Brute_Force.db_default "password"
+7		members : search				OK		SQL inj. to get DB - read db and apply md5 on Member_Sql_Injection.users "countersign"
+4		home : leave a feedback			OK (Antoine) : just write 'a' as username and comment
+
+
+
+3		home : add image				
+
+5		home : copyright BornToSec		
+6		survey : grades					
+
+8		IP/admin						
+
+11		
+12		facebook ?
+13		twitter ?
+14		instagram ?

