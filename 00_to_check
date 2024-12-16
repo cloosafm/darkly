@@ -2,10 +2,10 @@
 2		home : search image				OK		SQL inj. to get DB - read db and apply md5 on Member_images.list_images "comment"
 1		home : login					OK		SQL inj. to get DB - read db and apply md5 on Member_Brute_Force.db_default "password"
 7		members : search				OK		SQL inj. to get DB - read db and apply md5 on Member_Sql_Injection.users "countersign"
-4		home : leave a feedback			OK (Antoine) : just write 'a' as username and comment
-8		IP/admin						
-11		redirection :social networks
-
+4		home : leave a feedback			OK		just write 'a' (or any single letter) as username and comment
+8		IP/admin						OK 		find password with robots.txt
+11		redirection :social networks	OK		modify redirection
+12		email_recovery					OK		modify recovery email
 
 
 3		home : add image				
@@ -14,6 +14,6 @@
 6		survey : grades					
 
 
-12		
+
 13		
 14		
