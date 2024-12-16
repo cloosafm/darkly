@@ -6,12 +6,15 @@
 8		IP/admin						OK 		find password with robots.txt
 11		redirection :social networks	OK		modify redirection
 12		email_recovery					OK		modify recovery email
+6		survey : grades					OK		change printed values
+
+
 
 
 3		home : add image				
 
 5		home : copyright BornToSec		
-6		survey : grades					
+
 
 
 
