@@ -1,0 +1,17 @@
+tried scanning ports to check for apps (WSTG-INFO-04):
+nmap –Pn –sT –sV –p0-65535 192.168.56.101
+=> only port used is port 80
+
+
+let's try using a vulnerability scanner ? nikto ?
+
+
+
+WSTG-INFO-05
+try to use a js script
+
+
+used IP/robots.txt
+=> 2 directories
+==> whatever -> gives flag ip_admin
+==> .hiden
