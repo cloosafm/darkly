@@ -16,3 +16,4 @@ Url : admin
 
 
 => tried same as for login page, does not work
+=> also made sure that cookie "I_am_admin" was set to True, still does not work
