@@ -7,16 +7,10 @@
 11		redirection :social networks	OK		modify redirection
 12		email_recovery					OK		modify recovery email
 6		survey : grades					OK		change printed values
-
+5		home : copyright BornToSec		OK		spoof nsa
 
 
 
 3		home : add image				
-
-5		home : copyright BornToSec		
-
-
-
-
-13		
+13		.hidden/						
 14		

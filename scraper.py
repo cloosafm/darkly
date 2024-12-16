@@ -1,10 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 import os
+from os import system
+ 
 
 
-
-def find_files(url, visited=None, depth=0, max_depth=26):
+def find_files(url, visited=None, depth=0, max_depth=12):
     if visited is None:
         visited = set()
     
@@ -25,20 +26,7 @@ def find_files(url, visited=None, depth=0, max_depth=26):
         return
     
     soup = BeautifulSoup(req.content, 'html.parser')
-
-    for link in soup.find_all('a'):
-        href = link.get('href')
-        if href and href.endswith('/'):
-            find_files(url + href, visited, depth + 1, max_depth)
-        elif 'flag' in href:
-            file_url = url + href
-
-            with open('href.txt', 'a') as f:
-                f.write(f"{file_url}\n")
-                file_content_req = requests.get(file_url)
-                file_content = file_content_req.text
-                f.write(f"{file_content}\n")
-
+    
     for link in soup.find_all('a'):
         href = link.get('href')
         if href and href.endswith('/'):
@@ -60,6 +48,6 @@ def find_files(url, visited=None, depth=0, max_depth=26):
                 print(f"Failed to get file info: {e}")
 
 # Starting URL
-url = 'http://192.168.56.101/.hidden/'
+url = 'http://192.168.56.101:80/.hidden/'
 
 find_files(url)
