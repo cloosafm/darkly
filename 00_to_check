@@ -8,11 +8,11 @@
 10		email_recovery					OK		modify recovery email
 6		survey : grades					OK		change printed values
 5		home : copyright BornToSec		OK		spoof nsa
-
+12		.hidden/						OK		script to crawl through /.hidden directory revealed by robots.txt
 
 
 3		home : add image				
-12		.hidden/						
+
 13		
 14		
 
