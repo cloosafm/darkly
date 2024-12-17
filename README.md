@@ -1,6 +1,7 @@
 # darkly
 
-This is a security assessment report on the project "darkly", structured as suggested by the OWASP testing guide.
+This is a security assessment report on the project "darkly", structured as suggested by the OWASP testing guide. See the foollowing :
+https://owasp.org/www-project-web-security-testing-guide/v42/5-Reporting/README
 
 ## Table of content
 
@@ -34,6 +35,7 @@ As a consequence, be able to understand how to secure these breaches proactively
 ## Findings
 
 ### Findings summary
+The exact content of each finding will be in the Resolution.md of their directory
 
 ID	Title				Risk level
 01	
@@ -61,35 +63,6 @@ For each finding, give the following information:
 - detailed description of vulnerability, how to exploit it, resulting damage
 - detailed steps on how to remediate the vulnerability, possible improvements, what security practices are missing
 - additional resources to help understand the vulnerability
-
-
-### 01
-
-### 02
-
-### 03
-
-### 04
-
-### 05
-
-### 06
-
-### 07
-
-### 08
-
-### 09
-
-### 10
-
-### 11
-
-### 12
-
-### 13
-
-### 14
 
 
 ## Appendices

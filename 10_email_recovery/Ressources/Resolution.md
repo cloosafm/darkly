@@ -1,5 +1,6 @@
 trying to signin => forgot password
 => inspect the "submit" button
+an email is stored in plain text (means there's no check for user ID)
 change email value
 
 

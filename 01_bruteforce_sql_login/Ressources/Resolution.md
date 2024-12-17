@@ -43,3 +43,4 @@ for both combo (root/shadow and admin/shadow) :
 Get to page that says:
 "The flag is : b3a6e43ddf8b4bbb4125e5e7d23040433827759d4de1c04ea63907479a80a6b2 "
 
+also works in bruteforce ?
