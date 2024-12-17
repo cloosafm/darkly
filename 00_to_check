@@ -13,24 +13,29 @@
 
 
 3		home : add image				
-14		
+14		(another xss vulnerability)
 
 
-01	bruteforce
-02	SQL1
-03	file upload
-04	XSS1
-05	spoof
-06	survey
-07	SQL2
-08	admin/htpasswd
-09	cookie
-10	recover
-11	redirection
-12	hidden file
-13	include
+Resolution written down:
+number			done				exploit easiness
 
-	XSS2
+1.1 (sql)		OK					very easy
+1.2 (brute)		
+2				OK					very easy
+3				(not found yet)
+4				
+5				
+6				
+7				OK					very easy
+8				OK					moderately difficult
+9				OK					moderately easy
+10				OK					very easy
+11				OK					very easy
+12				OK					difficult
+13				OK					moderately easy
+14				(not found yet)
+
+
 
 key points:
 XSS

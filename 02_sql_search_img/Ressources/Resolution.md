@@ -3,12 +3,15 @@
 ## Exploitability
 Very easy. Only 2 steps required : inject code in input field, then decrypt md5 using easy-to-find web tool.
 
-## Risk level ??
+## Risk level/type
+OWASP top 10
+- A02:2021 – Cryptographic Failures		using md5 encryption
+- A03:2021 – Injection 					vulnerability to SQL injection
 
 ## Detailed description of the exploit
 First check whether input field is protected against SQL injections by typing:
 ```1 or 1=1```
-This yields 5 elements, seemingly from database. The last one being :
+This yields 5 elements, seemingly from a SQL database. The last one being :
 
 ```
 ID: 5 
@@ -56,5 +59,16 @@ f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188
 
 ## Remediation
 
-Input sanitizing is the first step
+Input sanitizing is the first step.
+There are several ways to sanitize the input, depending on the code architecture (legacy).
+The first step is to use prepared statements with parameterized queries
+	-> this means that the query would not be evaluated as a command but as a string, looking for an exact match to the string (i.e. a username matching "1 or 1 = 1")
+For legacy code, you can also escape all the user input before putting it in a query.
+
 Also, md5 is now deprecated in favor of sha2 algorithms (sha256, sha512) as well as sha3 algorithms.
+
+## Additional resources
+https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html
+
+md5 deprecation notice :
+https://www.security-database.com/detail.php?alert=VU836068

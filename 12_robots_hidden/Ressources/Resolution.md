@@ -1,4 +1,38 @@
-/robots.txt revealed url /.hidden
+# Finding 12 - robots.txt - .hidden/
 
-26 top-level directories and one README, each seem to have 26 sub-level subdirs and one README, and so on...
-created crawler script to go through it all and find the content of all READMEs
+## Exploitability
+Difficult. Need to know (and check) for a specific page, and have some scripting skills.
+
+## Risk level/type
+OWASP top 10
+
+????
+
+## Detailed description of the exploit
+Previously, we found the robots.txt file:
+192.168.56.101/robots.txt
+
+This showed 2 directories:
+- /whatever/
+- /.hidden/
+
+If we go to:
+192.168.56.101/.hidden/
+We can see 26 top-level directories and one README. Each directory seems to have 26 sub-level subdirs... let's not waste any more time.
+We write a scraping script that will go through all these directories recursively, in order to find the flag.
+
+The 1st part is to go through all directories, and store the URLs of the files in a set.
+Then we go through all the files and check the content - a lot of it is similar.
+We want to compare any content to what was previously found, and print only what is new.
+
+After a while - and some more-or-less funny messages, we find:
+```Hey, here is your flag : d5eec3ec36cf80dce44a896f961c1831a05526ec215693c8f2c39543497d4466
+```
+
+## Remediation
+
+The file robots.txt should/must not contain any sensitive data. Its purpose is to tell any web robot which section of the site it may visit.
+Although the file may contain the ```Disallow``` directive, this is not binding for scraper/crawlers which may chose to disregard the directive. Keep in mind that the robots.txt file is a public file !
+
+## Additional resources
+???????

@@ -1,10 +1,22 @@
-local file inclusion vulnerability, also known as path traversal:
-try going to http://192.168.56.101/?page=../../../../../../../../etc/passwd
-pop-up says:
+# Finding 13 - local file inclusion
 
-Congratulaton!! The flag is : b12c4b2cb8094750ae121a676269aa9e2872d07c06e429d25a63196ec1c8c1d0
+## Exploitability
+Moderately easy. Need specific knowledge about the vulnerability.
 
+## Risk level/type
+OWASP top 10
+????????????
 
+## Detailed description of the exploit
+The local file inclusion consists of injecting code on the URL.
+Specifically, path traversal is about trying to access known possible credential paths that are alike in the OS and the site structure.
 
-found on :
+One such known vulnerability is to add ```/?page=../../../../../../../../etc/passwd``` after the domain name (here, IP address).
+So, let's try that. We get to a page that says:
+"Congratulaton!! The flag is : b12c4b2cb8094750ae121a676269aa9e2872d07c06e429d25a63196ec1c8c1d0"
+
+## Remediation
+????????????//
+
+## Additional resources
 https://medium.com/@Aptive/local-file-inclusion-lfi-web-application-penetration-testing-cc9dc8dd3601
