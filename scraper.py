@@ -10,7 +10,6 @@ class Scraper:
         self.max_depth = 0
         self.content_list = []
         self.session = requests.Session()  # helps clean up connections to avoi all the max-tries srrors...
-        # self.session.headers.update({'User-Agent': 'Mozilla/5.0 (compatible; Scraper/1.0)'})  # Set a user-agent
 
     def download_url(self, url):
         try:
