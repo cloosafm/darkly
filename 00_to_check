@@ -5,12 +5,42 @@
 4		home : leave a feedback			OK		just write 'a' (or any single letter) as username and comment
 8		IP/admin						OK 		find password with robots.txt
 11		redirection :social networks	OK		modify redirection
-12		email_recovery					OK		modify recovery email
+10		email_recovery					OK		modify recovery email
 6		survey : grades					OK		change printed values
 5		home : copyright BornToSec		OK		spoof nsa
 
 
 
 3		home : add image				
-13		.hidden/						
+12		.hidden/						
+13		
 14		
+
+
+
+
+01	bruteforce
+02	SQL1
+03	file upload
+
+05	spoof
+06	survey
+07	SQL2
+08	admin/htpasswd
+09	cookie
+10	recover
+11	redirection
+12	hidden file
+
+
+	XSS1
+	XSS2
+	include
+	
+
+key points:
+XSS
+SQL
+redirection
+bruteforce
+robots.txt

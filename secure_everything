@@ -1,1 +1,12 @@
-can we secure it against SQL injections when connected as admin ?
+https://top10proactive.owasp.org/archive/2018/0x04-introduction/
+https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html
+
+
+how to secure against SLQ injections
+	=> sanitize input (escape special characters...), server-side input validation (whitelisting...)
+
+other issues:
+site is only http => need to enforce TLS for ALL pages 
+
+md5 (and sha1) deprecated => use sha2 (like sha256, sha512) or better (see sha3)
+all pwd are encrypted, but email-recovery address is in plaintext
