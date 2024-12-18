@@ -1,11 +1,12 @@
 # Finding 01 - login - SQL injection
 
 ## Exploitability
-Very easy. Only 2 steps required : inject code in input field, then decrypt md5 using easy-to-find web tool.
+Easy. Only 2 steps required : inject code in input field, then decrypt md5 using easy-to-find web tool.
 
 ## Risk level/type
-OWASP top 10
-- A02:2021 – Cryptographic Failures		using md5 encryption
+OWASP top 10 :
+- A02:2021 – Cryptographic Failures
+	=>" Are deprecated hash functions such as MD5 or SHA1 in use [...] ?"
 - A03:2021 – Injection 					vulnerability to SQL injection
 
 
@@ -52,6 +53,8 @@ Also, md5 is now deprecated in favor of sha2 algorithms (sha256, sha512) as well
 
 ## Additional resources
 https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html
+
+https://cheatsheetseries.owasp.org/cheatsheets/Database_Security_Cheat_Sheet.html
 
 md5 deprecation notice :
 https://www.security-database.com/detail.php?alert=VU836068

@@ -4,9 +4,12 @@
 Moderately easy. Inspect cookie and note its name, see that the value is hashed, figure out the hash algo then replace value.
 
 ## Risk level/type
-OWASP top 10
-- A02:2021 – Cryptographic Failures		using md5 encryption
-- A07:2021 – Identification and Authentication Failures icon
+OWASP top 10 :
+- A01:2021 – Broken Access Control
+	=> "Metadata manipulation, such as replaying or tampering with [...] a cookie [...] to elevate privileges or abusing JWT invalidation."
+- A02:2021 – Cryptographic Failures
+	=>" Are deprecated hash functions such as MD5 or SHA1 in use [...] ?"
+- A07:2021 – Identification and Authentication Failures
 
 ## Detailed description of the exploit
 Let's inspect the cookie. It has quite a remarkable name : "I_am_admin"

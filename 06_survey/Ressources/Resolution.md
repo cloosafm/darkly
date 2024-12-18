@@ -7,3 +7,24 @@ Get to flag page :
 
 
  issue is : insecure input validation
+
+
+
+
+
+
+ # Finding 06 - survey page : insecure input validation
+
+## Exploitability
+
+
+## Risk level/type
+
+
+## Detailed description of the exploit
+
+
+## Remediation
+
+
+## Additional resources

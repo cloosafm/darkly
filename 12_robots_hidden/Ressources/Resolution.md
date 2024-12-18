@@ -4,7 +4,7 @@
 Difficult. Need to know (and check) for a specific page, and have some scripting skills.
 
 ## Risk level/type
-OWASP top 10
+OWASP top 10 :
 
 ????
 
@@ -23,9 +23,9 @@ We write a scraping script that will go through all these directories recursivel
 
 The 1st part is to go through all directories, and store the URLs of the files in a set.
 Then we go through all the files and check the content - a lot of it is similar.
-We want to compare any content to what was previously found, and print only what is new.
+We want to compare each file content to what was previously found, and print only what is new.
 
-After a while - and some more-or-less funny messages, we find:
+After a while - and some more-or-less funny messages - we find:
 ```Hey, here is your flag : d5eec3ec36cf80dce44a896f961c1831a05526ec215693c8f2c39543497d4466
 ```
 

@@ -3,10 +3,10 @@
 ## Exploitability
 ???
 ## Risk level/type
-OWASP top 10
-- A02:2021 – Cryptographic Failures		using md5 encryption
-
-??? - A07:2021 – Identification and Authentication Failures icon
+OWASP top 10 :
+- A02:2021 – Cryptographic Failures
+	=>" Are deprecated hash functions such as MD5 or SHA1 in use [...] ?"
+- A07:2021 – Identification and Authentication Failures
 
 ???
 

@@ -5,3 +5,35 @@ put the letter 'a' in both username and comment fields, and get the message:
 
 actually, works also with 'alert' and 'script', only in name field
 is a known javascript xss vulnerability
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Finding 04 - cross-site scripting on "Feedback" page
+
+## Exploitability
+
+
+## Risk level/type
+
+
+## Detailed description of the exploit
+
+
+## Remediation
+
+
+## Additional resources
+
+https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html
+
+https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
