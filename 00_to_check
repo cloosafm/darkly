@@ -22,7 +22,7 @@ number			done				tested	exploit easiness
 1.1 (sql)		OK					OK		Easy
 1.2 (brute)				
 2				OK					OK		Easy
-3				(not found yet)
+3				
 4				
 5				
 6				
@@ -31,12 +31,33 @@ number			done				tested	exploit easiness
 9				OK					OK		Moderately easy
 10				OK					OK		Easy
 11				OK					OK		Easy
-12				??					OK		Difficult
+12				OK					OK		Difficult
 13				OK					OK		Moderately easy
-14				(not found yet)
+14				
 
 
 re-check all res.md for owasp/cwe info
+once got all CWE, update owasp accordingly
+
+final check ok
+01.1	
+01.2	
+02		ok
+03		
+04		
+05		
+06		
+07		ok
+08		ok
+09		ok
+10		ok
+11		ok
+12		ok
+13		ok
+14		
+
+
+
 
 
 key points:

@@ -60,7 +60,6 @@ For each finding, wegive the following information:
 - vulnerability title
 
 - likelihood/exploitability of the issue, with a difficulty assessment and quick description of the difficulty.
-	We decided on 4 levels : Easy, Moderately easy, Moderately difficult, Difficult
 
 - risk level/type : we reference where the vulnerability stands in the owasp top 10 and in CWE
 
@@ -74,11 +73,11 @@ For each finding, wegive the following information:
 ## Appendices
 
 ### Resources
-
-### Methodology
+Resources can be found in each Finding's Reslution.md file.
 
 ### Severity and risk rating explanations
+In terms of easiness of exploit, we decided on 4 levels : Easy, Moderately easy, Moderately difficult, Difficult
+These ratings are only to be evaluated in relation to the project itself. This means that exploits rated as "Difficult" are not necessarily extremely difficult to find and exploit, but they are the most difficult in this project.
 
 ### Tools and relevant outputs
-
-### Checklist of all conducted tests
+Each Finding's Resolution.md lists relevant outputs as well as the tools that were used.

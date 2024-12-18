@@ -1,12 +1,24 @@
 # Finding 12 - robots.txt - .hidden/
 
+
 ## Exploitability
 Difficult. Need to know (and check) for a specific page, and have some scripting skills.
 
+
 ## Risk level/type
 OWASP top 10 :
+- A01:2021 – Broken Access Control
+	=> "Violation of the principle of least privilege or deny by default, where access should only be granted for particular capabilities, roles, or users, but is available to anyone."
 
-????
+
+Common Weakness Enumeration :
+
+CWE-552: Files or Directories Accessible to External Parties
+https://cwe.mitre.org/data/definitions/552.html
+
+CWE-548: Exposure of Information Through Directory Listing
+https://cwe.mitre.org/data/definitions/548.html
+
 
 ## Detailed description of the exploit
 Previously, we found the robots.txt file:
@@ -33,6 +45,8 @@ After a while - and some more-or-less funny messages - we find:
 
 The file robots.txt should/must not contain any sensitive data. Its purpose is to tell any web robot which section of the site it may visit.
 Although the file may contain the ```Disallow``` directive, this is not binding for scraper/crawlers which may chose to disregard the directive. Keep in mind that the robots.txt file is a public file !
+Also, authorization and access control must be put in place ti ensure the identity of whomever tries to access any files.
+
 
 ## Additional resources
-???????
+https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html

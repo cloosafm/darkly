@@ -3,10 +3,14 @@
 ## Exploitability
 Moderately easy. Need specific knowledge about the vulnerability.
 
+
 ## Risk level/type
 OWASP top 10 :
+- A01:2021 – Broken Access Control
+	=> "Violation of the principle of least privilege or deny by default, where access should only be granted for particular capabilities, roles, or users, but is available to anyone."
 A03:2021 – Injection
 	=> "User-supplied data is not validated, filtered, or sanitized by the application."
+
 
 Common Weakness Enumeration :
 
@@ -22,6 +26,7 @@ https://cwe.mitre.org/data/definitions/23.html
 CWE-36: Absolute Path Traversal
 https://cwe.mitre.org/data/definitions/36.html
 
+
 ## Detailed description of the exploit
 The local file inclusion consists of injecting code on the URL, to obtain a remote location from which one can retrieve info or code to execute.
 
@@ -36,8 +41,10 @@ We get to a page that says:
 
 Note: in our case, we need to use at least 7 "../" to get the flag.
 
+
 ## Remediation
 You want to validate user input on the serverside with an allowlist. Ideally, use chrooted jail and strict access policies in order to restrict where files can be obtained.
+
 
 ## Additional resources
 https://medium.com/@Aptive/local-file-inclusion-lfi-web-application-penetration-testing-cc9dc8dd3601

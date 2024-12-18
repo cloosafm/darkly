@@ -1,13 +1,30 @@
 # Finding 07 - SQL injection on member searching input field
 
+
 ## Exploitability
 Easy. Only 2 steps required : inject code in input field, then decrypt md5 using easy-to-find web tool.
+
 
 ## Risk level/type
 OWASP top 10 :
 - A02:2021 – Cryptographic Failures
 	=>" Are deprecated hash functions such as MD5 or SHA1 in use [...] ?"
-- A03:2021 – Injection 					vulnerability to SQL injection
+- A03:2021 – Injection
+	=> "Hostile data is directly used or concatenated. The SQL or command contains the structure and malicious data in dynamic queries, commands, or stored procedures."
+	=> "User-supplied data is not validated, filtered, or sanitized by the application."
+
+
+Common Weakness Enumeration :
+
+CWE-327: Use of a Broken or Risky Cryptographic Algorithm
+https://cwe.mitre.org/data/definitions/327.html
+
+CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+https://cwe.mitre.org/data/definitions/89.html
+
+CWE-20: Improper Input Validation
+https://cwe.mitre.org/data/definitions/20.html
+
 
 ## Detailed description of the exploit
 First check whether input field is protected against SQL injections by typing:
@@ -64,6 +81,7 @@ echo -n "FortyTwo" | tr '[:upper:]' '[:lower:]' | sha256sum | awk '{print $1}'
 The flag is:
 10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5
 
+
 ## Remediation
 
 Input sanitizing is the first step.
@@ -73,6 +91,7 @@ The first step is to use prepared statements with parameterized queries
 For legacy code, you can also escape all the user input before putting it in a query.
 
 Also, md5 is now deprecated in favor of sha2 algorithms (sha256, sha512) as well as sha3 algorithms.
+
 
 ## Additional resources
 https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html

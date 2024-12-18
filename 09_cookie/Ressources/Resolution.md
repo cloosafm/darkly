@@ -9,7 +9,16 @@ OWASP top 10 :
 	=> "Metadata manipulation, such as replaying or tampering with [...] a cookie [...] to elevate privileges or abusing JWT invalidation."
 - A02:2021 – Cryptographic Failures
 	=>" Are deprecated hash functions such as MD5 or SHA1 in use [...] ?"
-- A07:2021 – Identification and Authentication Failures
+
+
+Common Weakness Enumeration 
+
+CWE-327: Use of a Broken or Risky Cryptographic Algorithm
+https://cwe.mitre.org/data/definitions/327.html
+
+CWE-922: Insecure Storage of Sensitive Information
+https://cwe.mitre.org/data/definitions/922.html
+
 
 ## Detailed description of the exploit
 Let's inspect the cookie. It has quite a remarkable name : "I_am_admin"

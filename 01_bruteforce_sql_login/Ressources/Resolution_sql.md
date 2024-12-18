@@ -1,13 +1,29 @@
 # Finding 01 - login credentials - SQL injection
 
+
 ## Exploitability
 Easy. Only 2 steps required : inject code in input field, then decrypt md5 using easy-to-find web tool.
+
 
 ## Risk level/type
 OWASP top 10 :
 - A02:2021 – Cryptographic Failures
 	=>" Are deprecated hash functions such as MD5 or SHA1 in use [...] ?"
-- A03:2021 – Injection 					vulnerability to SQL injection
+- A03:2021 – Injection
+	=> "Hostile data is directly used or concatenated. The SQL or command contains the structure and malicious data in dynamic queries, commands, or stored procedures."
+	=> "User-supplied data is not validated, filtered, or sanitized by the application."
+
+
+Common Weakness Enumeration :
+
+CWE-327: Use of a Broken or Risky Cryptographic Algorithm
+https://cwe.mitre.org/data/definitions/327.html
+
+CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+https://cwe.mitre.org/data/definitions/89.html
+
+CWE-20: Improper Input Validation
+https://cwe.mitre.org/data/definitions/20.html
 
 
 ## Detailed description of the exploit
@@ -41,8 +57,8 @@ We can try to login with either combo (root/shadow and admin/shadow) :
 We arrive on a page that says:
 "The flag is : b3a6e43ddf8b4bbb4125e5e7d23040433827759d4de1c04ea63907479a80a6b2 "
 
-## Remediation
 
+## Remediation
 Input sanitizing is the first step.
 There are several ways to sanitize the input, depending on the code architecture (legacy).
 The first step is to use prepared statements with parameterized queries
@@ -50,6 +66,7 @@ The first step is to use prepared statements with parameterized queries
 For legacy code, you can also escape all the user input before putting it in a query.
 
 Also, md5 is now deprecated in favor of sha2 algorithms (sha256, sha512) as well as sha3 algorithms.
+
 
 ## Additional resources
 https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html
