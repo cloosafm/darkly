@@ -1,4 +1,4 @@
-# Finding 01 - login - bruteforce
+# Finding 01 - login credentials - bruteforce
 
 ## Exploitability
 ???

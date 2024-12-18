@@ -1,4 +1,4 @@
-# Finding 01 - login - SQL injection
+# Finding 01 - login credentials - SQL injection
 
 ## Exploitability
 Easy. Only 2 steps required : inject code in input field, then decrypt md5 using easy-to-find web tool.

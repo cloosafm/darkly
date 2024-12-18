@@ -37,31 +37,37 @@ As a consequence, be able to understand how to secure these breaches proactively
 ### Findings summary
 The exact content of each finding will be in the Resolution.md of their directory
 
-ID	Title				Risk level
-01	
-20	
+ID	Title
+01	login credentials (bruteforce and SQL injection)
+20	SQL injection on image searching input field
 03	
 04	
 05	
 06	
-07	
-08	
-09	
-10	
-11	
-12	
-13	
+07	SQL injection on member searching input field
+08	robots.txt - admin page
+09	cookie
+10	email recovery
+11	redirection
+12	robots.txt - .hidden/
+13	local file inclusion & path traversal
 14	
 
-For each finding, give the following information:
+For each finding, wegive the following information:
+
 - reference ID
+
 - vulnerability title
-- likelihood/exploitability of the issue (easiness of exploit / level of access required / motivation to exploit it...)
-- impact on vulnerability of system
-- risk level (e.g: low / medium / high / critical) with details on what each value means
-	-> also, CVSS score ?
-- detailed description of vulnerability, how to exploit it, resulting damage
-- detailed steps on how to remediate the vulnerability, possible improvements, what security practices are missing
+
+- likelihood/exploitability of the issue, with a difficulty assessment and quick description of the difficulty.
+	We decided on 4 levels : Easy, Moderately easy, Moderately difficult, Difficult
+
+- risk level/type : we reference where the vulnerability stands in the owasp top 10 and in CWE
+
+- description of vulnerability and how to exploit it
+
+- how to remediate the vulnerability, possible improvements, what security practices are missing
+
 - additional resources to help understand the vulnerability
 
 

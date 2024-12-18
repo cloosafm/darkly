@@ -1,4 +1,4 @@
-# Finding 13 - local file inclusion
+# Finding 13 - local file inclusion & path traversal
 
 ## Exploitability
 Moderately easy. Need specific knowledge about the vulnerability.
