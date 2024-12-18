@@ -57,12 +57,16 @@ The flag is : d19b4823e0d5600ceed56d5e896ef328d7a2b9e7ac7e80f4fcdb9b10bcb3e7ff
 ## Remediation
 The file robots.txt should/must not contain any sensitive data. Its purpose is to tell any web robot which section of the site it may visit.
 Although the file may contain the ```Disallow``` directive, this is not binding for scraper/crawlers which may chose to disregard the directive. Keep in mind that the robots.txt file is a public file !
+Data that should not be accessed remotely just should not be accessible via internet - or you want to implement strict access rules for that data.
+Obviously, authorization and access control must be put in place to ensure the identity of whomever tries to access any files.
 
 Also, md5 is now deprecated in favor of sha2 algorithms (sha256, sha512) as well as sha3 algorithms.
 
 
 ## Additional resources
 https://en.wikipedia.org/wiki/Robots.txt
+https://www.baeldung.com/cs/robots-txt-risk-threat
+https://portswigger.net/kb/issues/00600600_robots-txt-file
 
 md5 deprecation notice :
 https://www.security-database.com/detail.php?alert=VU836068

@@ -45,8 +45,13 @@ After a while - and some more-or-less funny messages - we find:
 
 The file robots.txt should/must not contain any sensitive data. Its purpose is to tell any web robot which section of the site it may visit.
 Although the file may contain the ```Disallow``` directive, this is not binding for scraper/crawlers which may chose to disregard the directive. Keep in mind that the robots.txt file is a public file !
-Also, authorization and access control must be put in place ti ensure the identity of whomever tries to access any files.
+Data that should not be accessed remotely just should not be accessible via internet - or you want to implement strict access rules for that data.
+Obviously, authorization and access control must be put in place to ensure the identity of whomever tries to access any files.
 
 
 ## Additional resources
+https://en.wikipedia.org/wiki/Robots.txt
+https://www.baeldung.com/cs/robots-txt-risk-threat
+https://portswigger.net/kb/issues/00600600_robots-txt-file
+
 https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html

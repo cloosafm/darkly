@@ -35,34 +35,3 @@ number			done				tested	exploit easiness
 13				OK					OK		Moderately easy
 14				
 
-
-re-check all res.md for owasp/cwe info
-once got all CWE, update owasp accordingly
-
-final check ok
-01.1	
-01.2	
-02		ok
-03		
-04		
-05		
-06		
-07		ok
-08		ok
-09		ok
-10		ok
-11		ok
-12		ok
-13		ok
-14		
-
-
-
-
-
-key points:
-XSS
-SQL
-redirection
-bruteforce
-robots.txt
