@@ -8,7 +8,7 @@ Easy. Only 2 steps required : inject code in input field, then decrypt md5 using
 ## Risk level/type
 OWASP top 10 :
 - A02:2021 – Cryptographic Failures
-	=>" Are deprecated hash functions such as MD5 or SHA1 in use [...] ?"
+	=> "Are deprecated hash functions such as MD5 or SHA1 in use [...] ?"
 - A03:2021 – Injection
 	=> "Hostile data is directly used or concatenated. The SQL or command contains the structure and malicious data in dynamic queries, commands, or stored procedures."
 	=> "User-supplied data is not validated, filtered, or sanitized by the application."
