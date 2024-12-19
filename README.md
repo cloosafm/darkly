@@ -36,10 +36,10 @@ The exact content of each Finding will be in the Resolution.md of their director
 ID	Title
 01	login credentials (2 methods : bruteforce and SQL injection)
 20	SQL injection on image searching input field
-03	
-04	
-05	
-06	
+03	XSS on media URL
+04	XSS on feedback page
+05	spoofing
+06	survey hack
 07	SQL injection on member searching input field
 08	robots.txt - admin page
 09	cookie
@@ -47,7 +47,7 @@ ID	Title
 11	redirection
 12	robots.txt - .hidden/
 13	local file inclusion & path traversal
-14	
+14	file upload
 
 For each finding, wegive the following information:
 - reference ID

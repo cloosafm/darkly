@@ -1,0 +1,20 @@
+same flag = 02 and 05
+
+
+
+01-brute
+
+
+3
+
+4
+
+5
+
+6
+
+14
+-> need to say (how) to create the webshell.php
+and add the curl response:
+
+<pre><center><h2 style="margin-top:50px;">The flag is : 46910d9ce35b385885a9f7e2b336249d622f29b267a1771fbacf52133beddba8</h2><br/><img src="images/win.png" alt="" width=200px height=200px></center> </pre><pre>/tmp/webshell.php succesfully uploaded.</pre>
