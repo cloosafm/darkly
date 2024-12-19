@@ -1,13 +1,19 @@
 # Finding 14 - File Upload Bypass
 
+
 ## Exploitability
 Moderate to Hard. Exploiting this requires knowledge of crafting HTTP requests and basic understanding of how to bypass file upload restrictions. However, it can be done using tools like curl or browser developer tools.
 
-## Risk level/type
 
+## Risk level/type
 OWASP top 10 :
 - A03:2021 - Injection
     => "User-supplied data is not validated, filtered, or sanitized by the application."
+
+Common Weakness Enumeration :
+
+CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+https://cwe.mitre.org/data/definitions/79.html
 
 
 ## Detailed description of the exploit
@@ -21,12 +27,14 @@ OWASP top 10 :
 - **Upload**
     - The server only checked the MIME type and/or file extension but did not validate the file's actual content.
 
+
 ## Impact
 
 - **Remote code execution:**
     - If attackers upload a malicious script (e.g., a PHP web shell), they can execute arbitrary commands on the server, potentially gaining full control over it.
 - **Data exfiltration and manipulation:**
     - Attackers could read or modify sensitive files, access the database, or exfiltrate sensitive data.
+
 
 ## Remediation
 1. **Server-side file validation:**
@@ -39,8 +47,8 @@ OWASP top 10 :
 4. **MIME type verification:**
     - Rely on server-side libraries (e.g., PHP’s finfo, Python’s magic, or Node.js’s mime) to verify file types.
 
-## Additional resources
 
+## Additional resources
 https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
 
 OWASP File Upload Security Guide:
