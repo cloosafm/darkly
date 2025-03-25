@@ -105,3 +105,6 @@ These ratings are only to be evaluated in relation to the project itself. This m
 
 ### Tools and relevant outputs
 Each Finding's Resolution.md lists relevant outputs as well as the tools that were used.
+
+## 42 score
+This project was fully completed at 125% (bonus : in-depth understanding of specific risks, such as SQL injection, XSS...)
